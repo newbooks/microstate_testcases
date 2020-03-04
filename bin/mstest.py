@@ -4,6 +4,12 @@ import os
 
 pw = 2.0  # base interaction in kt
 
+class Residue:
+    def __init__(self):
+        self.seq = 0
+        self.name = "R"
+        return
+
 class Prot:
     def __init__(self):
         self.residues = []
@@ -26,9 +32,12 @@ def makecase(r=100, i=0.4, c=4, l=1.0, folder="./"):
     os.chdir(folder)
 
     prot = Prot()
-    for i in range(len(residues)):
+    for i in range(residues):
+        res = Residue()
+        res.seq = i+1
+        prot.residues.append(res)
 
-        prot.residues
+    print(prot.residues)
 
     # exit folder
     os.chdir("../")

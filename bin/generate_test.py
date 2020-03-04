@@ -16,6 +16,5 @@ if __name__ == "__main__":
     parser.add_argument("-l", metavar="linkage", default=1.0, help="linkage strength between residues, default is 1.0", type=float)
     args = parser.parse_args()
 
-    # Make a simple case in directory
-    folder="minimum_case"
-    makecase(r=5, i=0.6, c=1, l=1.0, folder=folder)
+    folder="test_case"
+    makecase(r=args.r, i=args.i, c=args.c, l=args.l, folder=folder)
