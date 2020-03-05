@@ -11,10 +11,12 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=helpmsg)
     parser.add_argument("-r", metavar="residues", default=100, help="number of residues, default to 100", type=int)
-    parser.add_argument("-i", metavar="ionizable", default=1.0, help="fraction of ionizable residues, default 0.4", type=float)
+    parser.add_argument("-i", metavar="ionizable", default=0.4, help="fraction of ionizable residues, default 0.4",
+                        type=float)
     parser.add_argument("-c", metavar="clusters", default=4, help="number of clusters, default to 4", type=int)
+    parser.add_argument("-s", metavar="cluster_size", default=4, help="cluster size, default to 4", type=int)
     parser.add_argument("-l", metavar="linkage", default=1.0, help="linkage strength between residues, default is 1.0", type=float)
     args = parser.parse_args()
 
     folder="test_case"
-    makecase(r=args.r, i=args.i, c=args.c, l=args.l, folder=folder)
+    makecase(r=args.r, i=args.i, c=args.c, s=args.s, l=args.l, folder=folder)
