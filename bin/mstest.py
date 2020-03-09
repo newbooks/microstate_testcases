@@ -137,7 +137,7 @@ def makecase(r=100, i=0.4, c=4, s=4, l=1.0, folder="./"):
     for conf in conformers:
         fname = "%s.opp" % conf.name
         lines = []
-        
+
         open(fname, "w").writelines(lines)
 
     # exit folder
